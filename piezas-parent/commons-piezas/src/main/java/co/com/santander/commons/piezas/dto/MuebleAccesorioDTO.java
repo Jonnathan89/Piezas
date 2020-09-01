@@ -3,6 +3,8 @@ package co.com.santander.commons.piezas.dto;
 import java.io.Serializable;
 import java.util.Date;
 
+import lombok.Data;
+@Data
 public class MuebleAccesorioDTO implements Serializable {
 
 	/**
@@ -51,86 +53,86 @@ public class MuebleAccesorioDTO implements Serializable {
 		this.actividadEconomica = actividadEconomica;
 		this.ingresosMensuales = ingresosMensuales;
 	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getPrimerApellido() {
-		return primerApellido;
-	}
-
-	public void setPrimerApellido(String primerApellido) {
-		this.primerApellido = primerApellido;
-	}
-
-	public String getSegundoApeliido() {
-		return segundoApeliido;
-	}
-
-	public void setSegundoApeliido(String segundoApeliido) {
-		this.segundoApeliido = segundoApeliido;
-	}
-
-	public String getTipoIdentifacion() {
-		return tipoIdentifacion;
-	}
-
-	public void setTipoIdentifacion(String tipoIdentifacion) {
-		this.tipoIdentifacion = tipoIdentifacion;
-	}
-
-	public Integer getIdentificacion() {
-		return identificacion;
-	}
-
-	public void setIdentificacion(Integer identificacion) {
-		this.identificacion = identificacion;
-	}
-
-	public Date getFecha() {
-		return fecha;
-	}
-
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
-	}
-
-	public Integer getNumeroCelular() {
-		return numeroCelular;
-	}
-
-	public void setNumeroCelular(Integer numeroCelular) {
-		this.numeroCelular = numeroCelular;
-	}
-
-	public String getActividadEconomica() {
-		return actividadEconomica;
-	}
-
-	public void setActividadEconomica(String actividadEconomica) {
-		this.actividadEconomica = actividadEconomica;
-	}
-
-	public Integer getIngresosMensuales() {
-		return ingresosMensuales;
-	}
-
-	public void setIngresosMensuales(Integer ingresosMensuales) {
-		this.ingresosMensuales = ingresosMensuales;
-	}
+//
+//	public Integer getId() {
+//		return id;
+//	}
+//
+//	public void setId(Integer id) {
+//		this.id = id;
+//	}
+//
+//	public String getNombre() {
+//		return nombre;
+//	}
+//
+//	public void setNombre(String nombre) {
+//		this.nombre = nombre;
+//	}
+//
+//	public String getPrimerApellido() {
+//		return primerApellido;
+//	}
+//
+//	public void setPrimerApellido(String primerApellido) {
+//		this.primerApellido = primerApellido;
+//	}
+//
+//	public String getSegundoApeliido() {
+//		return segundoApeliido;
+//	}
+//
+//	public void setSegundoApeliido(String segundoApeliido) {
+//		this.segundoApeliido = segundoApeliido;
+//	}
+//
+//	public String getTipoIdentifacion() {
+//		return tipoIdentifacion;
+//	}
+//
+//	public void setTipoIdentifacion(String tipoIdentifacion) {
+//		this.tipoIdentifacion = tipoIdentifacion;
+//	}
+//
+//	public Integer getIdentificacion() {
+//		return identificacion;
+//	}
+//
+//	public void setIdentificacion(Integer identificacion) {
+//		this.identificacion = identificacion;
+//	}
+//
+//	public Date getFecha() {
+//		return fecha;
+//	}
+//
+//	public void setFecha(Date fecha) {
+//		this.fecha = fecha;
+//	}
+//
+//	public Integer getNumeroCelular() {
+//		return numeroCelular;
+//	}
+//
+//	public void setNumeroCelular(Integer numeroCelular) {
+//		this.numeroCelular = numeroCelular;
+//	}
+//
+//	public String getActividadEconomica() {
+//		return actividadEconomica;
+//	}
+//
+//	public void setActividadEconomica(String actividadEconomica) {
+//		this.actividadEconomica = actividadEconomica;
+//	}
+//
+//	public Integer getIngresosMensuales() {
+//		return ingresosMensuales;
+//	}
+//
+//	public void setIngresosMensuales(Integer ingresosMensuales) {
+//		this.ingresosMensuales = ingresosMensuales;
+//	}
 	 	
 	
 	

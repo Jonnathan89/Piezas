@@ -60,6 +60,10 @@ public class MuebleAccesorio implements Serializable {
 	@Column(name = "ingresos_mensuales")	
 	private Integer ingresosMensuales;
 	
+	public MuebleAccesorio () {
+		
+	}
+	
 
 	public MuebleAccesorio(String nombre, String primerApellido, String segundoApeliido, String tipoIdentifacion,
 			Integer identificacion, Date fecha, Integer numeroCelular, String actividadEconomica,
@@ -74,6 +78,32 @@ public class MuebleAccesorio implements Serializable {
 		this.actividadEconomica = actividadEconomica;
 		this.ingresosMensuales = ingresosMensuales;
 	}
+	
+	
+
+	public Integer getId() {
+		return id;
+	}
+
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+
+
+	public Date getFecha() {
+		return fecha;
+	}
+
+
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+
+
 
 	public String getNombre() {
 		return nombre;

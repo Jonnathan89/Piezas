@@ -15,6 +15,12 @@
 		<spring-cloud.version>Hoxton.SR1</spring-cloud.version>
 
 	</properties>
+	<modules>
+		<module>acceso-datos-piezas</module>
+		<module>acceso-datos-piezas-client</module>
+		<module>commons-piezas</module>
+		<module>services-back</module>
+	</modules>
 
 	<dependencyManagement>
 		<dependencies>
@@ -81,11 +87,4 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
-	<modules>
-		<module>acceso-datos-piezas</module>
-		<module>acceso-datos-piezas-client</module>
-		<module>commons-piezas</module>
-		<module>services-back</module>
-	</modules>
 </project>
