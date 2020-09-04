@@ -4,9 +4,16 @@ public enum Constants {
 
 	ENDPOINT_FIND_ALL_MUEBLES_ACCESORIOS(EndPoints.ENDPOINT_FIND_ALL_MUEBLES_ACCESORIOS),
 	ENDPOINT_CREATE_MUEBLES_ACCESORIOS (EndPoints.ENDPOINT_CREATE_MUEBLES_ACCESORIOS),
-	
+	ENDPOINT_CREATE_USER(EndPoints.ENDPOINT_CREATE_USER),
+	ENDPOINT_GENERATE_TOKEN (EndPoints.ENDPOINT_GENERATE_TOKEN),		
+	ENDPOINT_VALIDATE_USER(EndPoints.ENDPOINT_VALIDATE_USER),
+	ENDPOINT_USER_TYPE(EndPoints.ENDPOINT_USER_TYPE),
+	USERTYPE_TOKEN(EndPoints.USERTYPE_TOKEN),
+	ENDPOINT_USER_TYPE_FEIGN(EndPoints.ENDPOINT_USER_TYPE_FEIGN),
+	ENDPOINT_FIND_ALL_MUEBLES_ACCESORIOS_FEIGN(EndPoints.ENDPOINT_FIND_ALL_MUEBLES_ACCESORIOS_FEIGN),
 	//message
-	ACCESO_DATOS_PIEZAS();
+	ACCESO_DATOS_PIEZAS(),
+	SERVICE_BACK();
 	
 	
 	private String valueString ;
@@ -33,7 +40,14 @@ public enum Constants {
 	
 	public static class EndPoints {
 		public static final String ENDPOINT_FIND_ALL_MUEBLES_ACCESORIOS = "/findAllMuebleAccesorio";
+		public static final String ENDPOINT_FIND_ALL_MUEBLES_ACCESORIOS_FEIGN = "/muebleAccesorio-service/findAllMuebleAccesorio";
 		public static final String ENDPOINT_CREATE_MUEBLES_ACCESORIOS = "/createMuebleAccesorio" ;
+		public static final String ENDPOINT_CREATE_USER = "/createuser";
+		public static final String ENDPOINT_GENERATE_TOKEN = "/generateToken" ;		
+		public static final String ENDPOINT_VALIDATE_USER = "/validateUser" ;
+		public static final String ENDPOINT_USER_TYPE = "/typeuser" ;
+		public static final String USERTYPE_TOKEN = "token" ;
+		public static final String ENDPOINT_USER_TYPE_FEIGN = "/token-services/typeuser" ;
 		
 	}
 	

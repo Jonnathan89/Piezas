@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"co.com.santander"})
+@ComponentScan(basePackages = {"co.com.santander", "co.com.santander.datos.client.SecurityToken"})
 @EnableAutoConfiguration
 public class AccesoDatosPiezasApplication {
 
@@ -14,6 +14,5 @@ public class AccesoDatosPiezasApplication {
 		SpringApplication.run(AccesoDatosPiezasApplication.class, args);
 	}
 
-	
 	
 }

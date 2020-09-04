@@ -30,9 +30,7 @@ public class MuebleAccesorioDTO implements Serializable {
 
 	private String actividadEconomica;
 
-	private Integer ingresosMensuales;
-	
-	
+	private Integer ingresosMensuales;	
 
 	public MuebleAccesorioDTO() {
 		super();

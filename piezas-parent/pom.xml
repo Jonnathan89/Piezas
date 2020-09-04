@@ -19,7 +19,8 @@
 		<module>acceso-datos-piezas</module>
 		<module>acceso-datos-piezas-client</module>
 		<module>commons-piezas</module>
-		<module>services-back</module>
+		<module>services-back</module>		
+		<module>security-spring</module>
 	</modules>
 
 	<dependencyManagement>

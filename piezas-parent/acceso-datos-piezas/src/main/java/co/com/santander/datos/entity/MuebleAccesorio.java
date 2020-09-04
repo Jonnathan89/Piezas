@@ -19,7 +19,7 @@ import jdk.nashorn.internal.objects.annotations.Setter;
  *
  */
 @Entity
-@Table(name = "dataMueblesAccesorios")
+@Table(name = "datamueblesaccesorios")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class MuebleAccesorio implements Serializable {
 
