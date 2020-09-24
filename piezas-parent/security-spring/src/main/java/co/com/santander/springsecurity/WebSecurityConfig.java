@@ -1,4 +1,4 @@
-package co.com.santander;
+package co.com.santander.springsecurity;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -7,7 +7,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import co.com.santander.JWT.JWTAuthorizationFilter;
+import co.com.santander.springsecurity.JWT.JWTAuthorizationFilter;
 
 @EnableWebSecurity
 @Configuration
@@ -16,8 +16,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable().addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
-				.authorizeRequests().antMatchers(HttpMethod.GET, "/token-services/typeuser").permitAll().
-				antMatchers(HttpMethod.POST, "/token-service-back/generateToken").permitAll().
-				anyRequest().authenticated();
+				.authorizeRequests()
+				.antMatchers(HttpMethod.POST, "/token-service-back/generateToken").permitAll()
+				.anyRequest().authenticated();
 	}
 }

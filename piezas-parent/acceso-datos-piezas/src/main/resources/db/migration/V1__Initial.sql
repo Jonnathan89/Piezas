@@ -8,13 +8,16 @@ create table usuario(
 
 create table datamueblesaccesorios(
    id serial primary key not null,   
-   nombre varchar(100),
-   primer_apellido varchar(100),
-   segundo_apellido varchar(100),
-   tipo_identificacion varchar(100),
+   nombre varchar(100) not null,
+   primer_apellido varchar(100)not null,
+   segundo_apellido varchar(100) not null,
+   tipo_identificacion smallint not null,
    identificacion integer not null,
-   fecha date,
-   numero_celular integer,
-   actividad_economica varchar(100),
-   ingresos_mensuales integer
+   fecha date not null,
+   numero_celular bigint not null,
+   actividad_economica smallint not null,
+   ingresos_mensuales bigint not null
 );
+
+insert into usuario(username, password, typeuser) values('digital','Digital2020','token');
+

@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import co.com.santander.client.UsuarioClient;
-import co.com.santander.commons.piezas.dto.UsuarioDto;
 import co.com.santander.piezas.service.UsuarioService;
+import co.com.santander.springsecurity.Dto.UsuarioTokenDto;
 
 /**
  * @author j.ladinoh
@@ -25,7 +25,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	
 
 	@Override
-	public List<UsuarioDto> lstUserDtos(String typeUser) {
+	public List<UsuarioTokenDto> lstUserDtos(String typeUser) {
 		// TODO Auto-generated method stub
 		return usuarioClient.getUsuarioDtos(typeUser);
 	}

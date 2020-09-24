@@ -1,4 +1,4 @@
-package co.com.santander.Dto;
+package co.com.santander.springsecurity.Dto;
 
 import java.io.Serializable;
 

@@ -2,11 +2,10 @@ package co.com.santander.piezas.service;
 
 import java.util.List;
 
-import co.com.santander.commons.piezas.dto.UsuarioDto;
+import co.com.santander.springsecurity.Dto.UsuarioTokenDto;
 
 public interface UsuarioService {
-
 	
-	public List<UsuarioDto> lstUserDtos(String typeUser);
+	public List<UsuarioTokenDto> lstUserDtos(String typeUser);
 	
 }

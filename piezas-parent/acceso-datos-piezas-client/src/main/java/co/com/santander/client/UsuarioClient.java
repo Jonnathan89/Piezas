@@ -11,18 +11,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import co.com.santander.commons.Utils.Constants;
-import co.com.santander.commons.piezas.dto.UsuarioDto;
+import co.com.santander.springsecurity.Dto.UsuarioTokenDto;
 
 /**
- * @author j.ladinoh
+ * @author l.ruizs
  *
+ *
+ *must be config spring-security.data-access.url on application(yml or properties)
  */
 
-@FeignClient(value = "token-services", url = "http://localhost:8080")
+@FeignClient(value = "${acceso-datos-piezas.token-name}", url = "${acceso-datos-piezas.url}")
 public interface UsuarioClient {
-
 	
 	@GetMapping(value = Constants.EndPoints.ENDPOINT_USER_TYPE_FEIGN, produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<UsuarioDto> getUsuarioDtos (@RequestParam("typeuser")  String typeuser);
+	public List<UsuarioTokenDto> getUsuarioDtos (@RequestParam("typeuser")  String typeuser);
 
 }

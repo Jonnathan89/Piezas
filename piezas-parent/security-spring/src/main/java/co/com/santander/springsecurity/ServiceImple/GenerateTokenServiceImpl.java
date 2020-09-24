@@ -1,7 +1,7 @@
 /**
  * 
  */
-package co.com.santander.ServiceImple;
+package co.com.santander.springsecurity.ServiceImple;
 
 import java.util.Date;
 import java.util.List;
@@ -11,9 +11,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.stereotype.Service;
 
-import co.com.santander.Dto.TokenDto;
-import co.com.santander.Service.GenerateTokenService;
-import co.com.santander.commons.piezas.dto.UsuarioDto;
+import co.com.santander.springsecurity.Dto.TokenDto;
+import co.com.santander.springsecurity.Dto.UsuarioTokenDto;
+import co.com.santander.springsecurity.Service.GenerateTokenService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
@@ -45,9 +45,9 @@ public class GenerateTokenServiceImpl implements GenerateTokenService {
 
 		return "Bearer " + token;
 	}
-	
+
 	@Override
-	public TokenDto generateToken (UsuarioDto usuarioDto , List<UsuarioDto>  lstUsers) {
+	public TokenDto generateToken (UsuarioTokenDto usuarioDto , List<UsuarioTokenDto>  lstUsers) {
 		if (lstUsers.stream().anyMatch(p -> p.getUserName().equals(usuarioDto.getUserName()) && p.getPassword().equals(usuarioDto.getPassword()))) {
 			String token = getJWTToken(usuarioDto.getUserName());
 			TokenDto tokenSecurity = new TokenDto();

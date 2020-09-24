@@ -1,6 +1,7 @@
-package co.com.santander.JWT;
+package co.com.santander.springsecurity.JWT;
 
 import java.io.IOException;
+import java.util.Enumeration;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,9 +20,8 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.UnsupportedJwtException;
 
-
 public class JWTAuthorizationFilter extends OncePerRequestFilter {
-	
+
 	private final String HEADER = "Authorization";
 	private final String PREFIX = "Bearer ";
 	private final String SECRET = "M&A:SANTANDER";
@@ -38,17 +38,17 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 					SecurityContextHolder.clearContext();
 				}
 			} else {
-					SecurityContextHolder.clearContext();
+				SecurityContextHolder.clearContext();
 			}
 			filterChain.doFilter(request, response);
-		} catch ( UnsupportedJwtException | MalformedJwtException e) {
+		} catch (UnsupportedJwtException | MalformedJwtException e) {
 			response.setStatus(HttpServletResponse.SC_FORBIDDEN);
 			((HttpServletResponse) response).sendError(HttpServletResponse.SC_FORBIDDEN, e.getMessage());
 			return;
 		}
-		
+
 	}
-	
+
 	private Claims validateToken(HttpServletRequest request) {
 		String jwtToken = request.getHeader(HEADER).replace(PREFIX, "");
 		return Jwts.parser().setSigningKey(SECRET.getBytes()).parseClaimsJws(jwtToken).getBody();
@@ -61,7 +61,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 	 */
 	private void setUpSpringAuthentication(Claims claims) {
 		@SuppressWarnings("unchecked")
-		List<String> authorities = (List) claims.get("authorities");
+		List<String> authorities = (List<String>) claims.get("authorities");
 
 		UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(claims.getSubject(), null,
 				authorities.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList()));
@@ -75,8 +75,5 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 			return false;
 		return true;
 	}
-	
-	
-	
 
 }

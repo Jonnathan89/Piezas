@@ -6,13 +6,18 @@ package co.com.santander.datos.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
 
 /**
  * @author j.ladinoh
@@ -31,7 +36,7 @@ public class MuebleAccesorio implements Serializable {
     
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private int id;
 	
 	@Column(name = "nombre")
 	private String nombre ;
@@ -43,31 +48,33 @@ public class MuebleAccesorio implements Serializable {
 	private String segundoApeliido ;
 	
 	@Column(name = "tipo_identificacion")
-	private String tipoIdentifacion ;		
+	private int tipoIdentifacion ;		
 	
 	@Column(name = "identificacion")
 	private Integer identificacion ;
 	
+	@Temporal(TemporalType.DATE)
 	@Column(name = "fecha")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date fecha;
 	
 	@Column(name = "numero_celular")	
-	private Integer numeroCelular;
+	private long numeroCelular;
 	
 	@Column(name = "actividad_economica")	
-	private String actividadEconomica;
+	private int actividadEconomica;
 	
 	@Column(name = "ingresos_mensuales")	
-	private Integer ingresosMensuales;
+	private long ingresosMensuales;
 	
 	public MuebleAccesorio () {
 		
 	}
 	
 
-	public MuebleAccesorio(String nombre, String primerApellido, String segundoApeliido, String tipoIdentifacion,
-			Integer identificacion, Date fecha, Integer numeroCelular, String actividadEconomica,
-			Integer ingresosMensuales) {		
+	public MuebleAccesorio(String nombre, String primerApellido, String segundoApeliido, int tipoIdentifacion,
+			Integer identificacion, Date fecha, long numeroCelular, int actividadEconomica,
+			long ingresosMensuales) {		
 		this.nombre = nombre;
 		this.primerApellido = primerApellido;
 		this.segundoApeliido = segundoApeliido;
@@ -78,19 +85,66 @@ public class MuebleAccesorio implements Serializable {
 		this.actividadEconomica = actividadEconomica;
 		this.ingresosMensuales = ingresosMensuales;
 	}
-	
-	
 
-	public Integer getId() {
+
+	public int getId() {
 		return id;
 	}
 
 
-
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	public String getPrimerApellido() {
+		return primerApellido;
+	}
+
+
+	public void setPrimerApellido(String primerApellido) {
+		this.primerApellido = primerApellido;
+	}
+
+
+	public String getSegundoApeliido() {
+		return segundoApeliido;
+	}
+
+
+	public void setSegundoApeliido(String segundoApeliido) {
+		this.segundoApeliido = segundoApeliido;
+	}
+
+
+	public int getTipoIdentifacion() {
+		return tipoIdentifacion;
+	}
+
+
+	public void setTipoIdentifacion(int tipoIdentifacion) {
+		this.tipoIdentifacion = tipoIdentifacion;
+	}
+
+
+	public Integer getIdentificacion() {
+		return identificacion;
+	}
+
+
+	public void setIdentificacion(Integer identificacion) {
+		this.identificacion = identificacion;
+	}
 
 
 	public Date getFecha() {
@@ -98,76 +152,39 @@ public class MuebleAccesorio implements Serializable {
 	}
 
 
-
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
 
 
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getPrimerApellido() {
-		return primerApellido;
-	}
-
-	public void setPrimerApellido(String primerApellido) {
-		this.primerApellido = primerApellido;
-	}
-
-	public String getSegundoApeliido() {
-		return segundoApeliido;
-	}
-
-	public void setSegundoApeliido(String segundoApeliido) {
-		this.segundoApeliido = segundoApeliido;
-	}
-
-	public String getTipoIdentifacion() {
-		return tipoIdentifacion;
-	}
-
-	public void setTipoIdentifacion(String tipoIdentifacion) {
-		this.tipoIdentifacion = tipoIdentifacion;
-	}
-
-	public Integer getIdentificacion() {
-		return identificacion;
-	}
-
-	public void setIdentificacion(Integer identificacion) {
-		this.identificacion = identificacion;
-	}
-
-	public Integer getNumeroCelular() {
+	public long getNumeroCelular() {
 		return numeroCelular;
 	}
 
-	public void setNumeroCelular(Integer numeroCelular) {
+
+	public void setNumeroCelular(long numeroCelular) {
 		this.numeroCelular = numeroCelular;
 	}
 
-	public String getActividadEconomica() {
+
+	public int getActividadEconomica() {
 		return actividadEconomica;
 	}
 
-	public void setActividadEconomica(String actividadEconomica) {
+
+	public void setActividadEconomica(int actividadEconomica) {
 		this.actividadEconomica = actividadEconomica;
 	}
 
-	public Integer getIngresosMensuales() {
+
+	public long getIngresosMensuales() {
 		return ingresosMensuales;
 	}
 
-	public void setIngresosMensuales(Integer ingresosMensuales) {
+
+	public void setIngresosMensuales(long ingresosMensuales) {
 		this.ingresosMensuales = ingresosMensuales;
 	}
-	
+
 	
 }

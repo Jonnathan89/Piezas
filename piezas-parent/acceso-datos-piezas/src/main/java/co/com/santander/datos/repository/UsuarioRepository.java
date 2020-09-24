@@ -10,7 +10,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import co.com.santander.commons.piezas.dto.UsuarioDto;
 import co.com.santander.datos.entity.Usuario;
 
 

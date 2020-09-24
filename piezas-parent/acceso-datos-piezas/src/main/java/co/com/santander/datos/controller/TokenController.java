@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import co.com.santander.commons.Utils.Constants;
-import co.com.santander.commons.Utils.LoggerMessages;
 import co.com.santander.commons.piezas.dto.UsuarioDto;
 import co.com.santander.datos.entity.Usuario;
 import co.com.santander.datos.mapper.UsuarioMapper;

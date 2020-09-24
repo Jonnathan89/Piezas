@@ -9,7 +9,6 @@ import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +25,6 @@ import co.com.santander.piezas.service.MuebleAccesorioService;
  *
  */
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("muebleAccesorio-service")
 public class MuebleAccesorioBackController {
 
@@ -34,7 +32,7 @@ public class MuebleAccesorioBackController {
 	private MuebleAccesorioService muebleAccesorioService;
 
 	@ResponseBody
-	@GetMapping(value = Constants.EndPoints.ENDPOINT_FIND_ALL_MUEBLES_ACCESORIOS_FEIGN, produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = Constants.EndPoints.ENDPOINT_FIND_ALL_MUEBLES_ACCESORIOS, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<MuebleAccesorioDTO> getMuebleAccesoriosAll() {
 		// LoggerMessages.generateInitialLogSimple(Constants.ACCESO_DATOS_PIEZAS.toString(),Constants.EndPoints.ENDPOINT_FIND_ALL_MUEBLES_ACCESORIOS
 		// );
@@ -50,7 +48,6 @@ public class MuebleAccesorioBackController {
 		// LoggerMessages.generateInitialLogSimple("", "");
 		MuebleAccesorioDTO muebleAccesorio = muebleAccesorioService.createMuebleAccesorio(muebleAccesorioDTO);
 		return Objects.isNull(muebleAccesorio) ? new MuebleAccesorioDTO() : muebleAccesorio;
-
 	}
 	
 	

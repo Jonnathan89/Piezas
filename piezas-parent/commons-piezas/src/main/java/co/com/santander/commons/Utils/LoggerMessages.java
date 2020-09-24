@@ -7,14 +7,12 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 
 import co.com.santander.commons.dto.RequestHeaderDTO;
-import lombok.extern.slf4j.Slf4j;
 
 
 /**
  * @author j.ladinoh
  *
  */
-@Slf4j
 public class LoggerMessages {
 	
 	static Logger log;
