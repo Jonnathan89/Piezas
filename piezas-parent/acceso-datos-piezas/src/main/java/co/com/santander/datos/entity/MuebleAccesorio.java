@@ -45,7 +45,7 @@ public class MuebleAccesorio implements Serializable {
 	private String  primerApellido ;
 	
 	@Column(name = "segundo_apellido")
-	private String segundoApeliido ;
+	private String segundoApellido ;
 	
 	@Column(name = "tipo_identificacion")
 	private int tipoIdentifacion ;		
@@ -72,12 +72,12 @@ public class MuebleAccesorio implements Serializable {
 	}
 	
 
-	public MuebleAccesorio(String nombre, String primerApellido, String segundoApeliido, int tipoIdentifacion,
+	public MuebleAccesorio(String nombre, String primerApellido, String segundoApellido, int tipoIdentifacion,
 			Integer identificacion, Date fecha, long numeroCelular, int actividadEconomica,
 			long ingresosMensuales) {		
 		this.nombre = nombre;
 		this.primerApellido = primerApellido;
-		this.segundoApeliido = segundoApeliido;
+		this.segundoApellido = segundoApellido;
 		this.tipoIdentifacion = tipoIdentifacion;
 		this.identificacion = identificacion;
 		this.fecha = fecha;
@@ -117,13 +117,13 @@ public class MuebleAccesorio implements Serializable {
 	}
 
 
-	public String getSegundoApeliido() {
-		return segundoApeliido;
+	public String getSegundoApellido() {
+		return segundoApellido;
 	}
 
 
-	public void setSegundoApeliido(String segundoApeliido) {
-		this.segundoApeliido = segundoApeliido;
+	public void setSegundoApeliido(String segundoApellido) {
+		this.segundoApellido = segundoApellido;
 	}
 
 

@@ -18,7 +18,7 @@ public class MuebleAccesorioDTO implements Serializable {
 
 	private String primerApellido;
 
-	private String segundoApeliido;
+	private String segundoApellido;
 
 	private int tipoIdentifacion;
 
@@ -36,14 +36,14 @@ public class MuebleAccesorioDTO implements Serializable {
 		super();
 	}
 
-	public MuebleAccesorioDTO(int id, String nombre, String primerApellido, String segundoApeliido,
+	public MuebleAccesorioDTO(int id, String nombre, String primerApellido, String segundoApellido,
 			int tipoIdentifacion, Integer identificacion, Date fecha, long numeroCelular, int actividadEconomica,
 			long ingresosMensuales) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.primerApellido = primerApellido;
-		this.segundoApeliido = segundoApeliido;
+		this.segundoApellido = segundoApellido;
 		this.tipoIdentifacion = tipoIdentifacion;
 		this.identificacion = identificacion;
 		this.fecha = fecha;
