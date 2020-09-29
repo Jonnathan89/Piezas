@@ -27,7 +27,6 @@ import co.com.santander.datos.repository.UsuarioRepository;
  *
  */
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("token-services")
 public class TokenController {
 

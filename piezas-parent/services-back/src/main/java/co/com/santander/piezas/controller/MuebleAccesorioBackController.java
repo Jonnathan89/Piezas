@@ -46,7 +46,13 @@ public class MuebleAccesorioBackController {
 	@PostMapping(value = Constants.EndPoints.ENDPOINT_CREATE_MUEBLES_ACCESORIOS, produces = MediaType.APPLICATION_JSON_VALUE)
 	public MuebleAccesorioDTO 	createMuebleAccesorio(@RequestBody MuebleAccesorioDTO muebleAccesorioDTO) {
 		// LoggerMessages.generateInitialLogSimple("", "");
-		MuebleAccesorioDTO muebleAccesorio = muebleAccesorioService.createMuebleAccesorio(muebleAccesorioDTO);
+		MuebleAccesorioDTO muebleAccesorio = null ; 
+		try {
+			muebleAccesorioService.createMuebleAccesorio(muebleAccesorioDTO);			
+		} catch (Exception e) {
+		e.printStackTrace();
+		}
+		
 		return Objects.isNull(muebleAccesorio) ? new MuebleAccesorioDTO() : muebleAccesorio;
 	}
 	

@@ -19,7 +19,6 @@ import co.com.santander.datos.mapper.MuebleAccesorioMapper;
 import co.com.santander.datos.repository.MuebleAccesorioRepository;
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("muebleAccesorio-services")
 public class MuebleAccesorioController {
 
@@ -34,8 +33,7 @@ public class MuebleAccesorioController {
 	@ResponseBody
 	@GetMapping(value = Constants.EndPoints.ENDPOINT_FIND_ALL_MUEBLES_ACCESORIOS, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<MuebleAccesorioDTO> getMuebleAccesoriosAll() {
-		// LoggerMessages.generateInitialLogSimple("", "");
-		System.out.print(" 1 ");
+		// LoggerMessages.generateInitialLogSimple("", "");		
 		List<MuebleAccesorio> lstMuebleAcc = muebleAccesorioRepository.findAll();
 		return lstMuebleAcc.isEmpty() ? new ArrayList<MuebleAccesorioDTO>()
 				: muebleAccesorioMapper.listMuebleAccerosioEntitiesToDTOs(lstMuebleAcc);
