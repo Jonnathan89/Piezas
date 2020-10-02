@@ -29,6 +29,7 @@ public class TokenControllerBack {
 	@PostMapping(value = Constants.EndPoints.ENDPOINT_GENERATE_TOKEN, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
 	public TokenDto findByUsernamePass(@RequestParam("username") String username,
 			@RequestParam("password") String password) throws Exception {
+		System.out.println("get token");
 		TokenDto tokenDto = new TokenDto();
 		UsuarioTokenDto usuarioDto = new UsuarioTokenDto(username, password);
 		List<UsuarioTokenDto> lstUserType = usuarioService.lstUserDtos(Constants.EndPoints.USERTYPE_TOKEN);
