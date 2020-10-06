@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "acceso-datos-piezas.url",
+    "type": "java.lang.String",
+    "description": "A description for 'acceso-datos-piezas.url'"
+  },
+  {
+    "name": "acceso-datos-piezas.service-name",
+    "type": "java.lang.String",
+    "description": "A description for 'acceso-datos-piezas.service-name'"
+  },
+  {
+    "name": "acceso-datos-piezas.token-name",
+    "type": "java.lang.String",
+    "description": "A description for 'acceso-datos-piezas.token-name'"
+  },
+  {
+    "name": "acceso-datos-piezas.token.url",
+    "type": "java.lang.String",
+    "description": "A description for 'acceso-datos-piezas.token.url'"
+  },
+  {
+    "name": "acceso-datos-piezas-token.url",
+    "type": "java.lang.String",
+    "description": "A description for 'acceso-datos-piezas-token.url'"
+  },
+  {
+    "name": "acceso-datos-piezas.token.service-name",
+    "type": "java.lang.String",
+    "description": "A description for 'acceso-datos-piezas.token.service-name'"
+  }
+]}

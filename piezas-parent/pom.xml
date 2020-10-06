@@ -21,6 +21,7 @@
 		<module>commons-piezas</module>
 		<module>services-back</module>		
 		<module>security-spring</module>
+		<module>santanderconsumer-exceptions</module>
 	</modules>
 
 	<dependencyManagement>
