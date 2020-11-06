@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan(basePackages = {"co.com.santander"})
+@ComponentScan(basePackages = {"co.com.santander", "co.com.santanderconsumer" })
 public class ServicesBackApplication {	
 
 	public static void main(String[] args) {

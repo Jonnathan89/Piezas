@@ -44,8 +44,8 @@ public class MuebleAccesorio implements Serializable {
 	@Column(name = "primer_apellido")
 	private String  primerApellido ;
 	
-	@Column(name = "segundo_apellido")
-	private String segundoApellido ;
+	@Column(name ="segundo_apellido")
+	private String segundoApellido;
 	
 	@Column(name = "tipo_identificacion")
 	private int tipoIdentifacion ;		

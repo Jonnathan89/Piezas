@@ -11,21 +11,40 @@ import org.springframework.http.HttpMethod;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class AccesoDatosPiezasApplication.
+ */
 @SpringBootApplication
 @ComponentScan(basePackages = {"co.com.santander", "co.com.santander.datos.client.SecurityToken", "co.com.santander.springsecurity"})
 @EnableAutoConfiguration
 public class AccesoDatosPiezasApplication {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		SpringApplication.run(AccesoDatosPiezasApplication.class, args);
 	}
 	
+	/**
+	 * Web server factory customizer.
+	 *
+	 * @return the web server factory customizer
+	 */
 	@Bean
 	public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory>
 	  webServerFactoryCustomizer() {
 	    return factory -> factory.setContextPath("/m&adataaccess/v1");
 	}
 	
+	/**
+	 * Cors configurer.
+	 *
+	 * @return the web mvc configurer
+	 */
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {

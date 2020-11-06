@@ -10,7 +10,7 @@ create table datamueblesaccesorios(
    id serial primary key not null,   
    nombre varchar(100) not null,
    primer_apellido varchar(100)not null,
-   segundo_apellido varchar(100) not null,
+   segundo_apellido varchar(100) ,
    tipo_identificacion smallint not null,
    identificacion integer not null,
    fecha date not null,
