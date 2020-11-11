@@ -27,11 +27,7 @@ public interface MuebleAccesorioMapper {
 	@Mapping(source="muebleAccerosioDTO.id", target="id")
 	@Mapping(source="muebleAccerosioDTO.nombre", target="nombre")
 	@Mapping(source="muebleAccerosioDTO.primerApellido", target="primerApellido")
-<<<<<<< HEAD
 	@Mapping(source="muebleAccerosioDTO.segundoApellido", target="segundoApellido")
-=======
-	//@Mapping(source="muebleAccerosioDTO.segundoApellido", target="segundoApellido")
->>>>>>> ed2926bb1c0149e998d0f787bad4303463765d73
 	@Mapping(source="muebleAccerosioDTO.tipoIdentifacion", target="tipoIdentifacion")
 	@Mapping(source="muebleAccerosioDTO.identificacion", target="identificacion" )
 	@Mapping(source="muebleAccerosioDTO.fecha", target="fecha" )
