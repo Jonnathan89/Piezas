@@ -115,14 +115,14 @@ public class MuebleAccesorio implements Serializable {
 	public void setPrimerApellido(String primerApellido) {
 		this.primerApellido = primerApellido;
 	}
-
+	
 
 	public String getSegundoApellido() {
 		return segundoApellido;
 	}
 
 
-	public void setSegundoApeliido(String segundoApellido) {
+	public void setSegundoApellido(String segundoApellido) {
 		this.segundoApellido = segundoApellido;
 	}
 

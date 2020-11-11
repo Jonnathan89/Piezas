@@ -13,13 +13,13 @@
 		<spring-boot.version>2.2.0.RELEASE</spring-boot.version>
 
 		<spring-cloud.version>Hoxton.SR1</spring-cloud.version>
-
+		<postgresql.client.version>42.2.6</postgresql.client.version>
 	</properties>
 	<modules>
 		<module>acceso-datos-piezas</module>
 		<module>acceso-datos-piezas-client</module>
 		<module>commons-piezas</module>
-		<module>services-back</module>		
+		<module>services-back</module>
 		<module>security-spring</module>
 		<module>santanderconsumer-exceptions</module>
 		<module>santander-keycloack-security</module>
@@ -58,7 +58,7 @@
 						<source>${java.version}</source>
 						<target>${java.version}</target>
 					</configuration>
-				</plugin>			
+				</plugin>
 
 				<plugin>
 					<groupId>ch.acanda.maven</groupId>
