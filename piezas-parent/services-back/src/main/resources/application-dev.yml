@@ -1,0 +1,56 @@
+# config de endpoint info para spring actuator
+info:
+  app:
+    name: ${project.name}
+    description: Api para proveer servicios a M&A
+    version: ${project.version}
+# config de endpoints para spring actuator
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+management:
+  endpoints:
+    enabled: false
+  health:
+    enabled: true
+  server:
+    address: 0.0.0.0
+    port: 9091
+  endpoint:
+    restart:
+      enabled: true
+logging:
+  config: classpath:logback-spring.xml
+# config de endpoints para spring actuator
+server:
+  ssl:
+    enabled: false
+  address: 0.0.0.0
+  port: 9091
+spring:
+  profiles:
+    active: "@spring.profiles.active@"
+  cloud:
+    kubernetes:
+      # define politica para el servicio cuando se hacen cambios en el configmap
+      reload:
+        enabled: true
+keycloak:
+  realm: rei_login
+  auth-server-url: http://localhost:8080/auth
+  ssl-required: external
+  resource: Cli-m&a-security
+  security-constraints:
+  - security-collections:
+    - patterns:
+      - /pionner
+    auth-roles:
+    - uma_authorization
+#oauth:
+#  keycloak:
+#    url-token: http://localhost:8080/auth/realms/rei_login/protocol/openid-connect/token
+#    client-id: cli_pionner
+#    client-secret: 4acada0b-3564-4e7f-b501-c18c04be67ff
+#    grant-type: client_credentials
+spring.main.allow-bean-definition-overriding: true
+

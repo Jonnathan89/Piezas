@@ -28,5 +28,25 @@
     "name": "acceso-datos-piezas.token.service-name",
     "type": "java.lang.String",
     "description": "A description for 'acceso-datos-piezas.token.service-name'"
+  },
+  {
+    "name": "oauth.keycloak.grant-type",
+    "type": "java.lang.String",
+    "description": "A description for 'oauth.keycloak.grant-type'"
+  },
+  {
+    "name": "oauth.keycloak.url-token",
+    "type": "java.lang.String",
+    "description": "A description for 'oauth.keycloak.url-token'"
+  },
+  {
+    "name": "oauth.keycloak.client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'oauth.keycloak.client-id'"
+  },
+  {
+    "name": "oauth.keycloak.client-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'oauth.keycloak.client-secret'"
   }
 ]}
